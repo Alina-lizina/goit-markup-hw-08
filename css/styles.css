@@ -92,27 +92,27 @@ header{
 }
 
 .contact-button{
+    display: flex;
     text-decoration: none;
+    margin: auto;
     font-weight: 500;
     color: #757575;
+    fill: #757575;
 }
 
-.contact-button.email::before{
-    content: '';
-    display: block;
-    background-color: red;
-    width: 16px;
-    height: 12px;
-    margin-right: 11px;
+ .email-icon{
+  
+   margin-right: 10px;
+   color: currentColor;
 }
-
 .tel-icon{
-
+   margin-right: 10px;
+   color: currentColor;
 }
 
 nav a {color: #212121; text-decoration: none;} 
 .contact a {color: #757575; text-decoration: none;}
-header a:hover {color: #2196F3; text-decoration: none;}
+header a:hover {color: #2196F3; text-decoration: none; fill: #2196F3;}
 a:hover.logo{color: #000; text-decoration: none;}
 
 
@@ -171,6 +171,18 @@ a:hover.logo{color: #000; text-decoration: none;}
 .description-facts{
     display: flex;
     gap: 30px;
+}
+
+.description-image{
+    display: inline-block;
+    height: 120px;
+    width: 270px;
+    background-color: #F5F4FA;
+    margin-bottom: 30px;
+}
+
+.description-icon{
+    padding: 25px 100px;
 }
 
 .description-fact{
@@ -294,12 +306,9 @@ a:hover.logo{color: #000; text-decoration: none;}
     gap: 30px;
 }
 
-/* .client-link{
-    display: flex;
-} */
-
 .client{
-    margin: auto;
+    display: inline;
+    margin: 0 auto;
     color: #AFB1B8;
     box-sizing: border-box;
     width: 170px;
@@ -331,6 +340,44 @@ footer a {color: #ffffff99; text-decoration: none;}
 
 .address{
     color:#fff;
+}
+
+.footer-line{
+    display: flex;
+    gap: 70px;
+}
+
+.social-links-title{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.footer-icons{
+    gap: 10px;
+    padding: 0;
+}
+
+.footer-icon{
+    display: inline-block;
+    gap: 10px;
+    color: #fff;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+}
+
+.footer-icon:hover{
+    display: inline-block;
+    color: #fff;
+    background: #2196F3;
+    border-radius: 50px;
+    height: 44px;
+}
+
+.social-icon{
+    fill: currentColor;
 }
 
 .portfolio{
@@ -369,6 +416,12 @@ footer a {color: #ffffff99; text-decoration: none;}
 .card{
     width: 370px;
     background-color: #fff;
+}
+
+.card:hover{
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.14);
+    box-shadow: 0 2px 1px rgba(0,0,0,0.2);
 }
 
 .content{
