@@ -99,9 +99,17 @@ header{
     color: #757575;
     fill: #757575;
 }
+.email, .tel {
+    display: flex;
+    align-items: center;
+}
 
- .email-icon{
-  
+.contact-icon, .contact-info{
+    display: flex;
+
+}
+
+.email-icon{
    margin-right: 10px;
    color: currentColor;
 }
@@ -156,6 +164,7 @@ a:hover.logo{color: #000; text-decoration: none;}
 
 .main-button{
     font-family: 'Roboto', sans-serif;
+    font-weight: 700;
     letter-spacing: 0.03rem;
     cursor: pointer;
     border-radius: 4px;
@@ -171,6 +180,11 @@ a:hover.logo{color: #000; text-decoration: none;}
 .description-facts{
     display: flex;
     gap: 30px;
+}
+
+.description-fact-title, .portfolio-buttons-title{
+    color: transparent;
+    position: absolute;
 }
 
 .description-image{
