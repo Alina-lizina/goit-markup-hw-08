@@ -1,11 +1,21 @@
-h1, h2, h3, h4, h5, h6, p, a, li, button{
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.03rem;
+}
+/* reset */
+
+h1, h2, h3, h4, h5, h6, p, button{
     margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
-	font: inherit;
 }
 
+a{
+    text-decoration: none;
+    color: inherit;
+}
 
 ul{
     padding: 0;
@@ -13,33 +23,40 @@ ul{
     list-style-type: none;
 }
 
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* reset */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.section{
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
 .container{
     width: 1200px;
-    box-sizing: border-box;
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
 }
-
-img{
-    display: block;
-    max-width: 100%;
-}
-
-section{
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
     
-body{
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    letter-spacing: 0.03rem;
-}
-
-header{
-    background-color: #fff;
+.header{
     border-bottom: #ECECEC solid 1px;
 }
 
@@ -54,15 +71,14 @@ header{
     font-size: 26px;
     color: #000;
     vertical-align: middle;
-    text-decoration: none;
     padding-top: 24px;
     padding-bottom: 25px;
 }
 
 .logo-footer{
     font-family: 'Raleway', sans-serif;
-    font-size: 26px;
     color: #fff;
+    font-size: 26px;
 } 
 
 .current{
@@ -72,17 +88,27 @@ header{
 .navigation{
     display: flex;
     margin-left: 93px;
+    gap: 50px;
 }
 
 .navigation-button{
     display: block; 
     font-weight: 500;
     color: #212121;
-    margin-right: 50px;
+    position: relative;
 }
 
-.navigation-button:last-child{
-    margin-right: 0;
+.current::after{
+    content:'';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -32px;
+    width: 100%;
+    height: 4px;
+    background-color: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
 }
 
 .contact{
@@ -91,51 +117,34 @@ header{
     gap: 50px;
 }
 
-.contact-button{
-    display: flex;
-    text-decoration: none;
-    margin: auto;
-    font-weight: 500;
-    color: #757575;
-    fill: #757575;
-}
 .email, .tel {
     display: flex;
     align-items: center;
+    color: rgba(255, 255, 255, 0.6);
 }
 
-.contact-icon, .contact-info{
+.contact-info{
     display: flex;
-
 }
 
-.email-icon{
+.email-icon, .tel-icon{
    margin-right: 10px;
-   color: currentColor;
-}
-.tel-icon{
-   margin-right: 10px;
-   color: currentColor;
+   fill: currentColor;
 }
 
-nav a {color: #212121; text-decoration: none;} 
-.contact a {color: #757575; text-decoration: none;}
-header a:hover {color: #2196F3; text-decoration: none; fill: #2196F3;}
-a:hover.logo{color: #000; text-decoration: none;}
+.contact a {color: #757575; font-weight: 500;}
+header a:hover {color: #2196F3; fill: #2196F3;}
+a:hover.logo{color: #000;}
 
 
 .main-banner{
-    display: flex;
-    flex-direction: column;
     padding-top: 200px;
     padding-bottom: 200px;
-    width: 100%;
     text-align: center;
 }
 
 .overlay{
     max-width: 1600px;
-    height: 600px;
     margin-left: auto;
     margin-right:auto; 
     background-image: linear-gradient(to right, 
@@ -152,6 +161,7 @@ a:hover.logo{color: #000; text-decoration: none;}
 .main-title{
     color: #FFF;
     font-size: 44px;
+    letter-spacing: 0.06rem;
     line-height: 1.36;
     align-self: center;
     font-weight: 900;
@@ -163,14 +173,12 @@ a:hover.logo{color: #000; text-decoration: none;}
 }
 
 .main-button{
-    font-family: 'Roboto', sans-serif;
     font-weight: 700;
     letter-spacing: 0.03rem;
     cursor: pointer;
     border-radius: 4px;
     border: none;
     background-color: #2196F3;
-    align-self: center ;
     color: #fff;
     font-size: 16px;
     line-height: 1.875;
@@ -182,37 +190,25 @@ a:hover.logo{color: #000; text-decoration: none;}
     gap: 30px;
 }
 
-.description-fact-title, .portfolio-buttons-title{
-    color: transparent;
-    position: absolute;
-}
-
 .description-image{
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 120px;
-    width: 270px;
     background-color: #F5F4FA;
     margin-bottom: 30px;
-}
-
-.description-icon{
-    padding: 25px 100px;
+    border-radius: 4px;
 }
 
 .description-fact{
-    width: 270px;
     color: #212121;
-    display: inline-block;
-    width: 300px;
-    vertical-align: top;
-    font-weight: 700;
+    width: 270px;
 }
 
 
 .description-text{
     margin-top: 10px;
     color: #757575;
-    font-weight: 300;
     line-height: 1.72;
 }
 .what-we-do{
@@ -230,6 +226,23 @@ a:hover.logo{color: #000; text-decoration: none;}
 .what-we-do-images{
     display: flex;
     gap: 30px;
+}
+
+.what-we-do-image{
+    position: relative;
+}
+
+.what-we-do-text{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    background-color: rgba(47, 48, 58, 0.8);
+    bottom: 0;
+    width: 370px;
+    height: 70px;
+    color: #fff;
 }
 
 .team{
@@ -252,10 +265,8 @@ a:hover.logo{color: #000; text-decoration: none;}
 
 .team-info{
     background-color: #fff;
-    border-radius: 4px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
-    box-shadow: 0 1px 1px rgba(0,0,0,0.14);
-    box-shadow: 0 2px 1px rgba(0,0,0,0.2);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
 }
 
 .team-info-content{
@@ -282,24 +293,27 @@ a:hover.logo{color: #000; text-decoration: none;}
     flex-direction: column;
     font-style: normal;
     gap: 9px;
-    margin-top: 20px;
 }
 
 .icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 10px;
-    padding: 16px 32px 0 32px;
+    margin-top: 16px;
 }
 
 .icon{
+    display: flex;
     color: #AFB1B8;
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
 }
 
-.icon:hover{
-    display: inline-block;
+.icon:hover, .icon:focus{
     color: #fff;
-    background: #2196F3;
-    border-radius: 50px;
-    height: 44px;
+    background-color: #2196F3;
 }
 
 .social-icon{
@@ -321,44 +335,44 @@ a:hover.logo{color: #000; text-decoration: none;}
 }
 
 .client{
-    display: inline;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #AFB1B8;
-    box-sizing: border-box;
     width: 170px;
     height: 92px;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
-    padding: 16px 32px;
-    background-color: #fff;
 }
 
-.client:hover{
-    display: inline-block;
+.client:hover, .client:focus{
     color: #2196F3;
-    border: 1px solid #2196F3;
+    border-color: #2196F3;
 }
 
 .client-icon{
     fill: currentColor;
 } 
 
-footer{
+.footer{
     background-color: #2F303A;
-    display: block;
     padding-top: 60px;
     padding-bottom: 60px;
 }
 
-footer a {color: #ffffff99; text-decoration: none;}
+.footer-container{
+    display: flex;
+    align-items: baseline;
+    gap: 70px;
+}
+
+.footer-address{
+    margin-top: 20px;
+    line-height: 1.714;
+}
 
 .address{
     color:#fff;
-}
-
-.footer-line{
-    display: flex;
-    gap: 70px;
 }
 
 .social-links-title{
@@ -366,20 +380,24 @@ footer a {color: #ffffff99; text-decoration: none;}
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 20px;
+    line-height: 1.14;
 }
 
 .footer-icons{
+    display: flex;
     gap: 10px;
     padding: 0;
 }
 
 .footer-icon{
-    display: inline-block;
-    gap: 10px;
     color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 44px;
+    width: 44px;
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 50px;
+    border-radius: 50%;
 }
 
 .footer-icon:hover{
@@ -388,10 +406,6 @@ footer a {color: #ffffff99; text-decoration: none;}
     background: #2196F3;
     border-radius: 50px;
     height: 44px;
-}
-
-.social-icon{
-    fill: currentColor;
 }
 
 .portfolio{
@@ -416,9 +430,10 @@ footer a {color: #ffffff99; text-decoration: none;}
     padding: 6px 22px;
 }
 
-.portfolio-button:hover {
+.portfolio-button:hover, .portfolio-button:focus{
     background-color: #2196F3;
     color: #fff;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .works{
@@ -430,12 +445,11 @@ footer a {color: #ffffff99; text-decoration: none;}
 .card{
     width: 370px;
     background-color: #fff;
+    border: 1px solid #EEEEEE;
 }
 
-.card:hover{
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
-    box-shadow: 0 1px 1px rgba(0,0,0,0.14);
-    box-shadow: 0 2px 1px rgba(0,0,0,0.2);
+.card:hover, .card:focus{
+   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .content{
@@ -460,3 +474,81 @@ footer a {color: #ffffff99; text-decoration: none;}
     margin-top: 4px;
 }
 
+.image-overlay{
+    position: relative;
+    overflow: hidden;
+}
+.card:hover .overlay-card {
+  transform: translateY(0);
+}
+
+.overlay-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 150, 243, 0.9);
+
+    transform: translateY(100%);
+    transition: transform 250ms ease;
+}
+
+.overlay-text {
+    color: #fff;
+    font-size: 12px;
+    padding: 63px 24px;
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.56;
+}
+
+.backdrop{
+    visibility: visible; 
+    opacity: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.is-hidden{
+    visibility: hidden; 
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-form{
+    background-color: #FFFFFF;
+    width: 528px;
+    height: 581px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 221px;
+    margin-bottom: 222px;
+}
+
+
+.close-btn{
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+    fill: #000;
+}
+
+.close-icon{
+    fill: currentColor;
+}

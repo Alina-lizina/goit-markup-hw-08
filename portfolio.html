@@ -9,12 +9,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
-     <header>
+     <header class="header">
         <div class="container main-nav">
         <a class="logo" href="./index.html"><span style="color: #2196F3">Web</span>Studio</a>
         <nav>
@@ -25,16 +25,16 @@
             </ul>
         </nav>
         <ul class="contact">
-            <li class="contact-button"><a class="email" href="mailto:info@devstudio.com"><span class="contact-icon"><svg class="email-icon" width="16" height="12"><use href="./images/symbol-defs.svg#icon-envelope"></use></svg></span><span class="contact-info">info@devstudio.com</span></a></li>
-            <li class="contact-button"><a class="tel" href="tel:+380961111111"><span class="contact-icon"><svg class="tel-icon" width="10" height="16"><use href="./images/symbol-defs.svg#icon-smartphone"></use></svg></span><span class="contact-info">+38 096 111 11 11</span></a></li>
+            <li class="contact-button"><a class="email" href="mailto:info@devstudio.com"><svg class="email-icon" width="16" height="12"><use href="./images/icons.svg#icon-envelope"></use></svg><span class="contact-info">info@devstudio.com</span></a></li>
+            <li class="contact-button"><a class="tel" href="tel:+380961111111"><svg class="tel-icon" width="10" height="16"><use href="./images/icons.svg#icon-smartphone"></use></svg><span class="contact-info">+38 096 111 11 11</span></a></li>
         </ul>
         </div>
     </header>
 
     <main>
-        <section class="portfolio">
+        <section class="section portfolio">
         <div class="container">
-            <h1 class="portfolio-buttons-title">портфоліо</h1>
+            <h1 class="visually-hidden">портфоліо</h1>
             <ul class="portfolio-buttons">
                 <li class="portfolio-button-sort"><button class="portfolio-button" type="button">Усі</button></li>
                 <li class="portfolio-button-sort"><button class="portfolio-button" type="button">Веб-сайти</button></li>
@@ -44,8 +44,12 @@
             </ul>
 
             <ul class="works">
-                <li class="card">
-                    <img class="portfolio-image" src="./images/portfolio1.jpg" width="370" height="294" alt="Технокряк">
+              <li class="card">
+                <div class="image-overlay">
+                <img class="portfolio-image" src="./images/portfolio1.jpg" width="370" height="294" alt="Технокряк">
+                <div class="overlay-card">
+                    <p class="overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p></div>
+                </div> 
                     <div class="content">
                         <h2 class="portfolio-title">Технокряк</h2>
                         <p class="portfolio-text">Веб-сайт</p>
@@ -112,30 +116,29 @@
         </section>
     </main>
 
-    <footer>
-      <div class="container">
-      <ul class="footer-line">
-      <li class="footer-line-column">
+   <footer class="footer">
+      <div class="footer-container container">
+      <div class="footer-line-column">
       <a class="logo-footer" href="./index.html"><span style="color: #2196F3">Web</span>Studio</a>
-      <address>
+      <address class="footer-address">
         <ul class="footer-info">
         <li><a class="address" href="">м. Київ, пр-т Лесі Українки, 26</a></li>
-        <li style="color: #ffffff99"><a class="email" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-        <li class="tel"><a class="tel" href="tel:+380961111111">+38 096 111 11 11</a></li>
-      </ul>
-      </address></li>
-
-      <li class="footer-line-column">
+        <li><a class="email" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+        <li><a class="tel" href="tel:+380961111111">+38 096 111 11 11</a></li>
+        </ul>
+        </address>
+      </div>
+      <div class="footer-line-column">
       <div class="social-links">
       <p class="social-links-title">приєднуйтесь</p>
       <div class="footer-icons">
-        <a class="footer-icon"><svg class="social-icon" width="44" height="44"><use href="./images/symbol-defs.svg#icon-instagram"></use></svg></a>
-        <a class="footer-icon"><svg class="social-icon" width="44" height="44"><use href="./images/symbol-defs.svg#icon-twitter"></use></svg></a>
-        <a class="footer-icon"><svg class="social-icon" width="44" height="44"><use href="./images/symbol-defs.svg#icon-facebook"></use></svg></a>
-        <a class="footer-icon"><svg class="social-icon" width="44" height="44"><use href="./images/symbol-defs.svg#icon-linkedin"></use></svg></a>
+        <a class="footer-icon" href><svg class="social-icon" width="44" height="44"><use href="./images/icons.svg#icon-instagram"></use></svg></a>
+        <a class="footer-icon" href><svg class="social-icon" width="44" height="44"><use href="./images/icons.svg#icon-twitter"></use></svg></a>
+        <a class="footer-icon" href><svg class="social-icon" width="44" height="44"><use href="./images/icons.svg#icon-facebook"></use></svg></a>
+        <a class="footer-icon" href><svg class="social-icon" width="44" height="44"><use href="./images/icons.svg#icon-linkedin"></use></svg></a>
       </div>
       </div>
-    </li></ul>
+    </div>
       </div>
     </footer>
 </body>
