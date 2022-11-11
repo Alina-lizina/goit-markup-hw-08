@@ -185,29 +185,31 @@
     </footer>
 
     <div class="backdrop is-hidden" data-modal>
-            <form action="#" class="modal-form" id="form">
+            <div class="modal-form">
                 <button class="close-btn" data-modal-close type="button"><svg class="send-icon" width="11" height="11"><use href="./images/icons.svg#icon-x"></use></svg></button>
-                <h4 class="form-title">Залиште свої дані, ми вам передзвонимо</h4>
+                <form class="contact-form">
+                    <h4 class="form-title">Залиште свої дані, ми вам передзвонимо</h4>
                 <div class="modal-form-field">
                     <label for="user-name" class="modal-field">Ім'я</label>
-                    <input required type="text" class="modal-field-input" id="user-name" name="Name" required><svg class="name-icon" width="15" height="15"><use href="./images/icons.svg#icon-human"></use></svg></div>
+                    <div class="input-container"><input required type="text" class="modal-field-input" id="user-name" name="Name"><svg class="field-icon" width="12" height="12"><use href="./images/icons.svg#icon-human"></use></svg></div></div>
                 <div class="modal-form-field">
                     <label for="user-tel" class="modal-field">Телефон</label>
-                    <input required type="text" class="modal-field-input" id="user-tel" name="Tel" required><svg class="name-icon" width="20" height="20"><use href="./images/icons.svg#icon-tel"></use></svg></div>
+                    <div class="input-container"><input required type="tel" class="modal-field-input" id="user-tel" name="Tel"><svg class="field-icon" width="13" height="13"><use href="./images/icons.svg#icon-tel"></use></svg></div></div>
                 <div class="modal-form-field">
                     <label for="user-email" class="modal-field">Пошта</label>
-                    <input required type="email" class="modal-field-input" id="user-email" name="Email" required><svg class="name-icon" width="20" height="20"><use href="./images/icons.svg#icon-email"></use></svg></div>
+                    <div class="input-container"><input required type="email" class="modal-field-input" id="user-email" name="Email"><svg class="field-icon" width="15" height="12"><use href="./images/icons.svg#icon-email"></use></svg></div></div>
                 <div class="modal-form-field">
                     <label class="modal-field">Коментар
                     <textarea name="comment" rows="5" placeholder="Введіть текст" class="modal-field-input-comment"></textarea></label>
                 </div>
 
                 <div class="modal-form-field-policy">
-                    <input type="checkbox" class="form-input" name="hobby" value="books" id="books" required>
-                    <label class="form-label" for="books">Погоджуюся з розсилкою та приймаю <a class="policy-conditions" href>Умови договору</a></label>
+                    <label class="check-field"><input type="checkbox" class="checkbox" name="policy" value="1" id="policy" required><span class="checkbox-icon"></span></label>
+                    <label class="form-label" for="policy">Погоджуюся з розсилкою та приймаю <a class="policy-conditions" href id="policy">Умови договору</a></label>
                     </div>
                 <button class="confirm-button" type="submit">Відправити</button>
-            </form>
+                </form>
+            </div>
     </div>
 
 <script src="./js/modal.js"></script>
