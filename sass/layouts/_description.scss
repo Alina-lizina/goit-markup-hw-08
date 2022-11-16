@@ -1,0 +1,25 @@
+.description__facts{
+    display: flex;
+    gap: 30px;
+}
+
+.description__fact{
+    color: #212121;
+    width: 270px;
+}
+
+.description__image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    background-color: #F5F4FA;
+    margin-bottom: 30px;
+    border-radius: 4px;
+}
+
+.description__text{
+    margin-top: 10px;
+    color: #757575;
+    line-height: 1.72;
+}
