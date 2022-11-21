@@ -21,16 +21,22 @@
 
 .main-banner__title{
     color: #FFF;
-    font-size: 44px;
+    font-size: 26px;
     letter-spacing: 0.06rem;
     line-height: 1.36;
     align-self: center;
     font-weight: 900;
     text-transform: uppercase;
     margin-bottom: 30px;
-    width: 696px;
     margin-left: auto;
     margin-right: auto;
+
+    @media screen and (min-width: 768px){
+    width: 360px}
+
+    @media screen and (min-width: 1200px){
+    font-size: 44px;
+    width: 696px;}
 }
 
 .main-banner__button{

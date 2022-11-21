@@ -26,6 +26,37 @@
             <li class="header__contact-item"><a class="header__contact-item-link" href="mailto:info@devstudio.com"><svg class="header__contact-icon" width="16" height="12"><use href="./images/icons.svg#icon-envelope"></use></svg><span class="contact-info">info@devstudio.com</span></a></li>
             <li class="header__contact-item"><a class="header__contact-item-link" href="tel:+380961111111"><svg class="header__contact-icon" width="10" height="16"><use href="./images/icons.svg#icon-smartphone"></use></svg><span class="contact-info">+38 096 111 11 11</span></a></li>
         </ul>
+
+
+        <button class="menu-toggle js-open-menu" type="button" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="menu-toggle__button" width="24" height="16">
+          <use href="./images/icons.svg#icon-menu"></use>
+        </svg>
+      </button>
+      <div class="mobile__menu-container js-menu-container" id="mobile-menu">
+        <button class="menu-toggle js-close-menu">
+          <svg class="mobile__menu-close-btn" width="19" height="19">
+            <use href="./images/icons.svg#icon-x"></use>
+          </svg>
+        </button>
+        <ul class="mobile__menu">
+          <li><a href="./index.html" class="mobile_menu-link--current">Студія</a></li>
+          <li><a href="./portfolio.html" class="mobile_menu-link">Портфоліо</a></li>
+          <li><a href="#" class="mobile_menu-link">Контакти</a></li>
+        </ul>
+        <div class="mobile__menu-wrap">
+          <ul class="mobile-menu mobile-contacts">
+            <li><a class="mobile_menu-contact-link-tel" href="tel:+380961111111">+38 096 111 11 11</a></li>
+            <li><a class="mobile_menu-contact-link-email" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+          </ul>
+          <ul class="mobile__socials">
+            <li class="mobile_menu-social-link"><a href="#">Instagram</a></li>
+            <li class="mobile_menu-social-link"><a href="#">Twitter</a></li>
+            <li class="mobile_menu-social-link"><a href="#">Facebook</a></li>
+            <li class="mobile_menu-social-link"><a href="#">LinkedIn</a></li>
+          </ul>
+
+
         </div>
     </header>
 
@@ -81,7 +112,7 @@
 <h2 class="team__title">Наша команда</h2>
 <ul class="team__info-columns">
     <li class="team__info">
-       <img width="270" height="260" src="./images/team1.jpg" alt="Ігор Дем'яненко">
+       <img class="team__image" width="270" height="260" src="./images/team1.jpg" alt="Ігор Дем'яненко">
        <div class="team__description"><h3 class="team__description-title">Ігор Дем'яненко</h3> 
        <p class="team__description-text">Product Designer</p>
         <div class="team__icons">
@@ -93,7 +124,7 @@
         </div>
     </li>
      <li class="team__info">
-       <img width="270" height="260" src="./images/team2.jpg" alt="Ольга Рєпіна">
+       <img class="team__image" width="270" height="260" src="./images/team2.jpg" alt="Ольга Рєпіна">
        <div class="team__description"><h3 class="team__description-title">Ольга Рєпіна</h3> 
        <p class="team__description-text">Frontend Developer</p>
        <div class="team__icons">
@@ -105,7 +136,7 @@
         </div>
     </li>
      <li class="team__info">
-       <img width="270" height="260" src="./images/team3.jpg" alt="Микола Тарасов">
+       <img class="team__image" width="270" height="260" src="./images/team3.jpg" alt="Микола Тарасов">
        <div class="team__description"><h3 class="team__description-title">Микола Тарасов</h3> 
        <p class="team__description-text">Marketing</p>
        <div class="team__icons">
@@ -117,7 +148,7 @@
         </div>
     </li>
      <li class="team__info">
-       <img width="270" height="260" src="./images/team4.jpg" alt="Михайло Єрмаков">
+       <img class="team__image" width="270" height="260" src="./images/team4.jpg" alt="Михайло Єрмаков">
        <div class="team__description"><h3 class="team__description-title">Михайло Єрмаков</h3> 
        <p class="team__description-text">UI Designer</p>
         <div class="team__icons">
@@ -155,12 +186,12 @@
         <ul class="footer__info">
         <li><a class="address" href="">м. Київ, пр-т Лесі Українки, 26</a></li>
         <li><a class="footer__contact-item-link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-        <li><a class="header__contact-item-link" href="tel:+380961111111">+38 096 111 11 11</a></li>
+        <li><a class="footer__contact-item-link" href="tel:+380961111111">+38 096 111 11 11</a></li>
         </ul>
       </address>
       </div>
 
-      <div class="footer__line-column">
+      <div class="footer__line-column join">
         <div class="footer__social-links">
         <p class="footer__social-links-title">приєднуйтесь</p>
           <div class="footer__icons">
@@ -206,7 +237,10 @@
                 </form>
             </div>
     </div>
-
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"></script>
+  <script defer src="./js/mobile-menu.js"></script>
 <script src="./js/modal.js"></script>
 
 </body>

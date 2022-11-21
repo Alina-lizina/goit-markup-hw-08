@@ -13,8 +13,12 @@
     font-size: 26px;
     color: #000;
     vertical-align: middle;
-    padding-top: 24px;
-    padding-bottom: 25px;
+    padding: 16px 0 16px 0;
+    margin-left: 0;
+
+    @media screen and (min-width: 768px){
+    padding: 24px 0 26px 0;
+    }
 }
 
 .header__logo-blue{
@@ -26,9 +30,20 @@
 }
 
 .header__navigation{
+    display: none;
+
+    @media screen and (min-width: 768px){
     display: flex;
+    margin-left: 87px;
+    margin-right: 96px;
+    gap: 50px;
+    }
+
+    @media screen and (min-width: 1200px){
+     display: flex;
     margin-left: 93px;
     gap: 50px;
+    }
 }
 
 .header__navigation-item{
@@ -59,9 +74,20 @@
 }
 
 .header__contact{
+    display: none;
+
+    @media screen and (min-width: 768px){
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 0;
+    gap: 10px;
+    }
+
+    @media screen and (min-width: 1200px){
     display: flex;
     margin-left: auto;
     gap: 50px;
+    }
 }
 
 .header__contact-item-link{
@@ -84,4 +110,153 @@
 .header__contact-icon{
    margin-right: 10px;
    fill: currentColor;
+}
+
+.menu-toggle__button{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 23px;
+    top: 22px;
+    width: 24px;
+    height: 16px;
+    background: none;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (min-width: 768px){
+    display: none;
+    }
+}
+
+.menu-toggle__button:hover, .menu-toggle__button:focus{
+    fill: #2196F3;
+} 
+
+.mobile__menu-close-btn{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 25px;
+    top: 21px;
+    width: 19px;
+    height: 19px;
+    background: none;
+    cursor: pointer;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+    color: #2196F3;
+}}
+
+.mobile__menu-container {
+  opacity: 0;
+  display: none;
+  position: fixed;
+  max-width: 767px ;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 48px 40px;
+  background-color: #fff;
+  z-index: 9;
+  transform: translateX(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+}
+
+.mobile__menu-container.is-open {
+  transform: translateX(0);
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mobile__menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: #fff;
+}
+
+.mobile__menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 302px;
+}
+
+.mobile_menu-link{
+  display: block;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: #212121;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: #2196F3;
+  }
+
+  &--current{
+    color: #2196F3;
+    font-size: 40px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+}
+}
+
+.mobile_menu-contact-link-tel{
+    display: block;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    color: #757575;
+    margin-bottom: 32px;
+    &:hover,
+    &:focus {
+    color: #2196F3;
+}}
+
+.mobile_menu-contact-link-email{
+    display: block;
+    margin-bottom: 64px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: #757575;
+    &:hover,
+    &:focus {
+    color: #2196F3;
+}}
+
+.mobile__socials{
+    display: flex;
+    
+}
+
+.mobile_menu-social-link{
+display: flex;
+font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: #2196F3;
+  padding: 0 10px;
+  &:first-child {
+    padding-left: 0;
+  }
+  &:nth-last-child(){
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
 }
