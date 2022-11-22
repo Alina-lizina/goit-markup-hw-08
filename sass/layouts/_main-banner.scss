@@ -1,53 +1,67 @@
-.main-banner{
-    padding-top: 200px;
-    padding-bottom: 200px;
-    text-align: center;
+.main-banner {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: center;
 }
 
-.overlay{
-    max-width: 1600px;
-    margin-left: auto;
-    margin-right:auto; 
-    background-image: linear-gradient(to right, 
-    rgba(47, 48, 58, 0.4),
-    rgba(47, 48, 58, 0.4)), 
+.overlay {
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 118px 0;
+  text-align: center;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(47, 48, 58, 0.4)),
     url('../images/hero_background.jpg');
-    background-size: cover;
-    background-position: center, 50% 40%;
-    background-repeat: no-repeat;
-    background-color: #C4C4C4;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(47, 48, 58, 0.4)),
+      url('../images/hero_background.jpg');
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1600px;
+    padding: 200px 0;
+  }
 }
 
+.main-banner__title {
+  color: #fff;
+  font-size: 26px;
+  letter-spacing: 0.06rem;
+  line-height: 1.36;
+  align-self: center;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
 
-.main-banner__title{
-    color: #FFF;
-    font-size: 26px;
-    letter-spacing: 0.06rem;
-    line-height: 1.36;
-    align-self: center;
-    font-weight: 900;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-    margin-left: auto;
-    margin-right: auto;
+  @media screen and (min-width: 768px) {
+    width: 360px;
+  }
 
-    @media screen and (min-width: 768px){
-    width: 360px}
-
-    @media screen and (min-width: 1200px){
+  @media screen and (min-width: 1200px) {
     font-size: 44px;
-    width: 696px;}
+    width: 696px;
+  }
 }
 
-.main-banner__button{
-    font-weight: 700;
-    letter-spacing: 0.03rem;
-    cursor: pointer;
-    border-radius: 4px;
-    border: none;
-    background-color: #2196F3;
-    color: #fff;
-    font-size: 16px;
-    line-height: 1.875;
-    padding: 10px 32px;
+.main-banner__button {
+  font-weight: 700;
+  letter-spacing: 0.03rem;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  background-color: #2196f3;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.875;
+  padding: 10px 32px;
 }

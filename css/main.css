@@ -347,14 +347,30 @@ img {
 }
 
 .overlay {
-  max-width: 1600px;
+  max-width: 480px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero_background.jpg");
-  background-size: cover;
-  background-position: center, 50% 40%;
+  padding: 118px 0;
+  text-align: center;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(47, 48, 58, 0.4)),
+  url('../images/hero_background.jpg');
   background-repeat: no-repeat;
-  background-color: #C4C4C4;
+  background-position: center;
+  background-size:cover;
+  @media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(47, 48, 58, 0.4)),
+   url('../images/hero_background.jpg');
+}
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1600px;
+    padding: 200px 0;
+  }
 }
 
 .main-banner__title {
