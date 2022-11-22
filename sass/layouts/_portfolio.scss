@@ -15,6 +15,7 @@
 
 .portfolio__button {
   cursor: pointer;
+  color: #212121;
   font-family: inherit;
   font-size: 16px;
   font-weight: 500;
@@ -59,7 +60,7 @@
 
   @media screen and (min-width: 768px) {
     margin-top: 30px;
-    width: 354px;
+    width: 200px;
     display: flex;
     flex-wrap: wrap;
   }
