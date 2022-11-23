@@ -1190,13 +1190,22 @@ img {
 .portfolio__buttons {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  width: 326px;
+  margin-bottom: 40px;
+  width: 100%;
   gap: 8px;
 }
 @media screen and (min-width: 768px) {
   .portfolio__buttons {
-    flex-wrap: no-wrap;
     justify-content: center;
+    margin-bottom: 30px;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio__buttons {
+    margin-bottom: 50px;
   }
 }
 
@@ -1247,15 +1256,11 @@ img {
 }
 @media screen and (min-width: 768px) {
   .portfolio__card {
-    margin-top: 30px;
-    width: 200px;
-    display: flex;
-    flex-wrap: wrap;
+    width: calc((100% - 30px) / 2);
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .portfolio__card {
-    margin-top: 50px;
     width: 370px;
   }
 }
