@@ -711,6 +711,7 @@ img {
 @media screen and (min-width: 1200px) {
   .footer__container {
     display: flex;
+    flex-wrap: nowrap;
     justify-content: flex-start;
     align-items: baseline;
     gap: 70px;
@@ -850,6 +851,11 @@ img {
     width: 450px;
   }
 }
+@media screen and (min-width: 786px) {
+  .subscribe__field-input {
+    margin-bottom: 0;
+  }
+}
 
 .subscribe__button {
   width: 200px;
@@ -925,6 +931,11 @@ img {
 @media screen and (min-width: 786px) {
   .subscribe__field-input {
     width: 450px;
+  }
+}
+@media screen and (min-width: 786px) {
+  .subscribe__field-input {
+    margin-bottom: 0;
   }
 }
 
