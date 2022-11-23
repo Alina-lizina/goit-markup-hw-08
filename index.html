@@ -100,9 +100,9 @@
         <div class="container">
 <h2 class="what-we-do__title">Чим ми займаємося</h2>
 <ul class="what-we-do__images">
-<li class="what-we-do__image"><img width="370" height="294" src="./images/what-we-do1.jpg" alt=""><div class="what-we-do__text">Десктопні додатки</div></li>
-<li class="what-we-do__image"><img width="370" height="294" src="./images/what-we-do2.jpg" alt=""><div class="what-we-do__text">Мобільні додатки</div></li>
-<li class="what-we-do__image"><img width="370" height="294" src="./images/what-we-do3.jpg" alt=""><div class="what-we-do__text">Дизайнерські рішення</div></li>
+<li class="what-we-do__image"><img width="370" height="294" src="./images/pc/what-we-do1.jpg" alt=""><div class="what-we-do__text">Десктопні додатки</div></li>
+<li class="what-we-do__image"><img width="370" height="294" src="./images/pc/what-we-do2.jpg" alt=""><div class="what-we-do__text">Мобільні додатки</div></li>
+<li class="what-we-do__image"><img width="370" height="294" src="./images/pc/what-we-do3.jpg" alt=""><div class="what-we-do__text">Дизайнерські рішення</div></li>
 </ul>
         </div>
         </section>
@@ -112,7 +112,12 @@
 <h2 class="team__title">Наша команда</h2>
 <ul class="team__info-columns">
     <li class="team__info">
-       <img class="team__image" width="270" height="260" src="./images/team1.jpg" alt="Ігор Дем'яненко">
+      <picture>
+       <source srcset="./images/pc/team1.jpg" media="(min-width: 1200px)"/>
+       <source srcset="./images/tablet/team1_tablet.jpg" media="(min-width: 768px)"/>  
+       <source srcset="./images/mobile/team1_mobile.jpg" media="(max-width: 767px)" />  
+       <img class="team__image" src="./images/mobile/team1_mobile.jpg" alt="Ігор Дем'яненко">
+       </picture>
        <div class="team__description"><h3 class="team__description-title">Ігор Дем'яненко</h3> 
        <p class="team__description-text">Product Designer</p>
         <div class="team__icons">
@@ -124,7 +129,12 @@
         </div>
     </li>
      <li class="team__info">
-       <img class="team__image" width="270" height="260" src="./images/team2.jpg" alt="Ольга Рєпіна">
+       <picture>
+       <source srcset="./images/pc/team2.jpg" media="(min-width: 1200px)"/>
+       <source srcset="./images/tablet/team2_tablet.jpg" media="(min-width: 768px)"/>  
+       <source srcset="./images/mobile/team2_mobile.jpg" media="(max-width: 767px)" />  
+       <img class="team__image" src="./images/mobile/team2_mobile.jpg" alt="Ольга Рєпіна">
+       </picture>
        <div class="team__description"><h3 class="team__description-title">Ольга Рєпіна</h3> 
        <p class="team__description-text">Frontend Developer</p>
        <div class="team__icons">
@@ -136,7 +146,12 @@
         </div>
     </li>
      <li class="team__info">
-       <img class="team__image" width="270" height="260" src="./images/team3.jpg" alt="Микола Тарасов">
+      <picture>
+       <source srcset="./images/pc/team3.jpg" media="(min-width: 1200px)"/>
+       <source srcset="./images/tablet/team3_tablet.jpg" media="(min-width: 768px)"/>  
+       <source srcset="./images/mobile/team3_mobile.jpg" media="(max-width: 767px)" />  
+       <img class="team__image" src="./images/mobile/team3_mobile.jpg" alt="Микола Тарасов">
+       </picture>
        <div class="team__description"><h3 class="team__description-title">Микола Тарасов</h3> 
        <p class="team__description-text">Marketing</p>
        <div class="team__icons">
@@ -148,7 +163,12 @@
         </div>
     </li>
      <li class="team__info">
-       <img class="team__image" width="270" height="260" src="./images/team4.jpg" alt="Михайло Єрмаков">
+       <picture>
+       <source srcset="./images/pc/team4.jpg" media="(min-width: 1200px)"/>
+       <source srcset="./images/tablet/team4_tablet.jpg" media="(min-width: 768px)"/>  
+       <source srcset="./images/mobile/team4_mobile.jpg" media="(max-width: 767px)" />  
+       <img class="team__image" src="./images/mobile/team4_mobile.jpg" alt="Михайло Єрмаков">
+       </picture>
        <div class="team__description"><h3 class="team__description-title">Михайло Єрмаков</h3> 
        <p class="team__description-text">UI Designer</p>
         <div class="team__icons">
