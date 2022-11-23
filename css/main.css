@@ -853,7 +853,7 @@ img {
     width: 450px;
   }
 }
-@media screen and (min-width: 786px) {
+@media screen and (min-width: 1200px) {
   .subscribe__field-input {
     margin-bottom: 0;
   }
@@ -935,7 +935,7 @@ img {
     width: 450px;
   }
 }
-@media screen and (min-width: 786px) {
+@media screen and (min-width: 1200px) {
   .subscribe__field-input {
     margin-bottom: 0;
   }
